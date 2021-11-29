@@ -39,6 +39,9 @@ class Rekins:
     print(f"\x1B[3mMateriāla cena EUR/m2:\x1B[0m\033[1;32m{self.materials}\033[1;0m")
     print(f"\x1B[3mIzmaksas:\x1B[0m\033[1;32m{self.aprekins()}\033[1;0m")
 
+    self.saglabat()
+    print(f"klienta dati saglabāti failā{self.klients}.csv")
+
 
 
 
@@ -49,6 +52,16 @@ class Rekins:
      PVN_summa = (produkta_cena + darba_samaksa)*PVN/100
      rekina_summa = (produkta_cena + darba_samaksa) + PVN_summa
      return rekina_summa
+
+
+   def saglabat(self):
+    import csv
+
+    with open(f"{self.klients}.csv","w",newline = "") as file:
+     writer = csv.writer(file)
+     writer.writerow = (["Klienta vārds","veltijums","izmers","Materiāla cena"])
+
+
 klients = input('Pasūtītāja vārds,uzvārds:')
 print('-'*50)
 veltijums = input('Nepieciešamais veltījums:')
