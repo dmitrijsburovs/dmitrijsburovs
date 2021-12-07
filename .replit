@@ -1,2 +1,2 @@
 language = "python3"
-run = "python uzdevums.py"
+run = "python 0712,2uzd.py"
