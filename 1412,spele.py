@@ -1,4 +1,4 @@
-#Spēle akmens, šķēres, papīrīts
+
 import tkinter as tk
 import random 
 def akmens(event):
@@ -25,22 +25,33 @@ def rezultati():
 
   if dators[2] == lietotajs[2]:
    lbl_rezultats['text'] = 'Rezultāts: Neizšķirts'
+  elif dators[2] == 'Akmens' and lietotajs[2] == 'Šķēres':
+   lbl_rezultats['text'] = 'Rezultāts: Jūs zaudējāt'
+  elif dators[2] == 'Akmens' and lietotajs[2] == 'Papīrs':
+   lbl_rezultats['text'] = 'Rezultāts: Jūs vinnējāt'
+  elif dators[2] == 'Šķēres' and lietotajs[2] == 'Papīrs':
+   lbl_rezultats['text'] = 'Rezultāts: Jūs zaudējāt'
+  elif dators[2] == 'Šķēres' and lietotajs[2] == 'Akmens':
+   lbl_rezultats['text'] = 'Rezultāts: Jūs vinnējāt'
+  elif dators[2] == 'Papīrs' and lietotajs[2] == 'Šķēres':
+   lbl_rezultats['text'] = 'Rezultāts: Jūs vinnējāt'
+  elif dators[2] == 'Papīrs' and lietotajs[2] == 'Akmens':
+   lbl_rezultats['text'] = 'Rezultāts: Jūs zaudējāt'
 
   else:
     lbl_rezultats['text'] = 'Vēl jāsataisa'
+    
+ 
 
-#Definējam logu
 window = tk.Tk()
 
-#Jāpievieno elementi
-#Informācija
+
 lbl_info = tk.Label(text = "Sveicināts/a!\nŠī ir spēle akmens, šķēres, papīrīts!")
-#Kas jādara
+
 lbl_darit = tk.Label(text = "Izvēlies kādu no zemāk piedāvātajiem variantiem: ")
-#ko katrs ir izvēlējies
+
 lbl_lietizv = tk.Label()
 lbl_datoraizv = tk.Label()
-#Rezultāts
 lbl_rezultats = tk.Label()
 
 
