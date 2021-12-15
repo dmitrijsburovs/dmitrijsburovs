@@ -10,7 +10,7 @@ class Ballite:
     return f"Pirkumu skaits {self.dekoracijas} un{self.ediens}."
 
   def pirkumi(self):
-    return self.davanas
+    return f"Pirkumi {self.dekoracijas} un{self.ediens}"
 
   def davanas(self):
     return f"davanas{self.vel_davanas}"
@@ -22,7 +22,6 @@ class Ballite:
 a = Ballite(["virtene, uzlime, pleve"], ["dima, emil, sanja"], ["kola, cipsi, alus"], ["bikses, vejaka, torte"],["temats_80tie_gadi"])
 print(a.tematika_80tie_gadi)
 print(a.pirkumi_skaits())
-print(a.dekoracijas)
-print(a.ediens)
 print(a.Ciemini())
 print(a.davanas())
+print(a.pirkumi())
